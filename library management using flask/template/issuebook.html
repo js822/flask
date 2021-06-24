@@ -1,0 +1,30 @@
+{% extends 'index.html' %}
+{% block side %}
+<style>
+    .issue_form{
+       width: 600px;
+       height: 600px;
+       background: rgb(243, 237, 237);
+       margin-left: 400px;
+       padding-left: 100px;
+       padding-top: 50px;
+   }
+</style>
+<a href="/">HOME</a>
+<div class="issue_form">
+    <h3>ISSUE BOOK</h3>
+   
+    <div class="issue_frm">
+        <form action="booksearch" method="POST">
+            <div>
+                <label>ENTER BOOK ID </label>
+                <input type="text" name="bname">
+                <input type="submit">
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'index.html' %}
+{% block side %}
+<style>
+     .adbk_form{
+        width: 600px;
+        height: 600px;
+        background: rgb(243, 237, 237);
+        margin-left: 400px;
+        padding-left: 100px;
+        padding-top: 50px;
+    }
+</style>
+<div class="adbk_frm">
+    <a href="/">HOME</a>
+    <div class="adbk_form">
+        <h3>ADD BOOK</h3>
+        <form action="bcreate" method="POST">
+            <div class="bname">
+                 <label for="bname">Book title</label>
+                  <input type="text" name="bname"><br>
+            </div>
+            <div>
+                 <label for="athname">Author name</label>
+                <input type="text" name="athname">
+            </div>
+            <div>
+                <label for="publisher">publisher</label>
+               <input type="text" name="publisher">
+           </div>
+           <div>
+                 <label for="price">Price</label>
+                 <input type="text" name="price">
+                 <label for="pages">Pages</label>
+                 <input type="text" name="pages">
+           </div>
+           <div class="form_btn">
+            <input type="submit" value="ADD BOOK">
+        </div>
+        </form>
+    </div>
+</div>
+{% endblock %}

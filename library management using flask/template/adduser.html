@@ -1,0 +1,55 @@
+{% extends 'index.html' %}
+{% block side %}
+<style>
+    .adusr_form{
+        width: 600px;
+        height: 600px;
+        background: rgb(243, 237, 237);
+        margin-left: 400px;
+        padding-left: 100px;
+        padding-top: 50px;
+    }
+    .radio{
+        margin-left: 150px;
+        margin-top: 20px;
+    }
+    .form_age{
+        
+        margin-top: 20px;
+    
+    }
+    .form_btn{
+        margin-top: 20px;  
+        margin-left: 150px;
+    }
+    h3{
+        margin-left: 150px;
+    }
+    </style>
+<a href="/">HOME</a>
+<div class="adusr_form">
+    <h3>ADD USER</h3>
+    <form action="/create" method="POST">
+        <div>
+        <label for="id">ENTER ID</label>
+        <input id="uname" type="text" name="id"><br>
+    </div>
+        <label for="uname">ENTER USER'S NAME  : </label>
+        <input id="uname" type="text" name="name"><br>
+        <div class="radio">
+             <input type="radio" value="male" name="gender" id="male">
+             <label for="male">Male</label>
+             <input type="radio" value="female" name="gender" id="female">
+            <label for="female">Female</label>
+        </div>
+        <div class="form_age">
+            <label for="age">AGE  : </label>
+            <input type="text" id="age" name="age"><br>
+        </div>
+        <div class="form_btn">
+            <input type="submit" value="ADD USER">
+        </div>
+        
+    </form>
+</div>
+{% endblock %}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LIBRARY MANAGEMENT</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename = 'index.css')}}">
+    </head>
+    <body>
+        <div class="title">
+            <h2 class="h1">LIBRARY MANAGEMENT USING FLASK</h2>
+            <input  class="sarea" type="text" id="search">
+            <input type="submit" value="search"> 
+        </div>  
+        
+        {% block side %}
+        <div class="side">
+            <div class="table">
+                <table id="center">
+                    <tr>
+                    <td>
+                        <button class="btn" onclick="location.href='adduser'" >ADD USER</a></button>
+                    </td>
+                    <td>
+                        <button class="btn" onclick="location.href='addbook'" >ADD BOOK</a></button>
+                    </td>
+                    <td>
+                        <button onclick="location.href='returnbook'" class="btn" >RETURN BOOK</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <button onclick="location.href='issuebook'" class="btn" >ISSUE BOOK</button>
+                    </td>
+                </tr>
+                 </table>
+            </div>
+       
+        </div>
+        {% endblock %}
+</body>
+</html>
